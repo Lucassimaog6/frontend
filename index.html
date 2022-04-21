@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Temporizador online</title>
+</head>
+
+<body>
+    
+    <h1>Temporizador online</h1>
+    
+    <div class="cabecalho">
+    <p class="item">Inicio</p>
+    <p class="item">Relógio</p>
+    <p class="item">Cronometro</p>
+    <p class="item">Sobre</p>
+    </div>
+
+    <p id="temp">00:00</p>
+
+
+    <div class="but">
+        <button onclick="iniciar()">Iniciar</button>
+        <button onclick="location.reload()">Parar</button>
+    </div>
+</body>
+
+<script>
+
+    function iniciar(){
+        setInterval(timerseg, 1000)
+        setInterval(timermin, 60000)
+    }
+
+    var contadorseg = 0
+    var contadormin = 0
+
+    function timerseg(){
+        document.getElementById("temp").textContent = contadormin + ":" + contadorseg;
+        if (contadorseg >= 60){
+            contadorseg = 0
+        }
+        contadorseg++
+    }
+
+    function timermin(){
+        contadormin++
+    }
+
+    
+</script>
+
+</html>
