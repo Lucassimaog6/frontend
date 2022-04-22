@@ -11,7 +11,7 @@
     <h1>Temporizador online</h1>
     
     <div class="cabecalho">
-    <p class="item">Inicio</p>
+    <p class="item">Temporizador</p>
     <p class="item">Relógio</p>
     <p class="item">Cronometro</p>
     <p class="item">Sobre</p>
@@ -27,27 +27,28 @@
 </body>
 
 <script>
-
     function iniciar(){
-        setInterval(timerseg, 1000)
-        setInterval(timermin, 60000)
-    }
+    minutos = 0 
+    segundos = 0
 
-    var contadorseg = 0
-    var contadormin = 0
+    setInterval(function(){
 
-    function timerseg(){
-        document.getElementById("temp").textContent = contadormin + ":" + contadorseg;
-        if (contadorseg >= 60){
-            contadorseg = 0
+        if(segundos >= 60){
+            segundos = 0
+            minutos++;
         }
-        contadorseg++
-    }
+        segundos++
 
-    function timermin(){
-        contadormin++
+        zero(segundos)
+        zero(minutos)
+        document.getElementById("temp").textContent = minutos + ":" + segundos
+    },1000)
     }
-
+    function zero(x){
+        if(x < 10){
+            x = "0" + x
+        }return x
+    }
     
 </script>
 
