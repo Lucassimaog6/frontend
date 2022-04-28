@@ -2,6 +2,11 @@
 <html lang="pt-BR">
 
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
     <title>Temporizador online</title>
 </head>
@@ -11,13 +16,13 @@
     <h1>Temporizador online</h1>
     
     <div class="cabecalho">
-    <p class="item">Inicio</p>
-    <p class="item">Relógio</p>
-    <p class="item">Cronometro</p>
-    <p class="item">Sobre</p>
+    <p class="item"><a href="index.html">Cronometro</a></p>
+    <p class="item"><a href="Relógio/relogio.html">Relógio</a></p>
+    <p class="item">Temporizador</p>
+    <p class="item"><a href="Sobre/sobre.html">Sobre</a></p>
     </div>
 
-    <p id="temp">00:00</p>
+    <p id="temp"> <span id="minuto">00</span>:<span id="segundo">00</span></p>
 
 
     <div class="but">
@@ -28,26 +33,21 @@
 
 <script>
 
+    let segundos = 0;
+    let minutos = 0;
+          
+    function segundo(){
+        segundos++;
+        if(segundos==60){
+        minutos++;
+        segundos=0;
+        document.getElementById('minuto').innerHTML=minutos
+        }  
+    document.getElementById('segundo').innerHTML=segundos              
+}
     function iniciar(){
-        setInterval(timerseg, 1000)
-        setInterval(timermin, 60000)
+        setInterval(function(){ segundo() },1000)
     }
-
-    var contadorseg = 0
-    var contadormin = 0
-
-    function timerseg(){
-        document.getElementById("temp").textContent = contadormin + ":" + contadorseg;
-        if (contadorseg >= 60){
-            contadorseg = 0
-        }
-        contadorseg++
-    }
-
-    function timermin(){
-        contadormin++
-    }
-
     
 </script>
 

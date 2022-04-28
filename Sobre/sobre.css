@@ -14,14 +14,6 @@ h1{
 
 }
 
-#temp{
-    color: #f8f8f2;
-    text-align: center;
-    font-size: 150pt;
-    font-weight: bold;
-    font-family: monospace;
-}
-
 .cabecalho{
     text-align: center;
     
@@ -39,24 +31,6 @@ p.item:hover{
     font-size: 25px;
 }
 
-.but{
-    text-align: center;
-}
-button{
-    background-color: #444754;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 10px;
-    margin-right: 10px;
-    color: #f8f8f2;
-    transition: font-size, 300ms;
-}
-button:hover{
-    background-color: #34374a;
-    font-size: 25px;
-}
-
 a:link, a:visited {
     color: #f8f8f2;
     text-decoration: none;
@@ -65,4 +39,19 @@ a:link, a:visited {
   
   a:link:active, a:visited:active {
     color: #f8f8f2;
+}
+
+.conteudo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: solid #44475a 5px;
+    border-radius: 20px;
+    padding: 50px;
+    width: fit-content;
+}
+.conteudo p{
+    font-size: 20px;
+    color: #f8f8f2;
+    
 }

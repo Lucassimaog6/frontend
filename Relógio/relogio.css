@@ -14,7 +14,7 @@ h1{
 
 }
 
-#temp{
+#relogio{
     color: #f8f8f2;
     text-align: center;
     font-size: 150pt;
@@ -41,20 +41,6 @@ p.item:hover{
 
 .but{
     text-align: center;
-}
-button{
-    background-color: #444754;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 10px;
-    margin-right: 10px;
-    color: #f8f8f2;
-    transition: font-size, 300ms;
-}
-button:hover{
-    background-color: #34374a;
-    font-size: 25px;
 }
 
 a:link, a:visited {
